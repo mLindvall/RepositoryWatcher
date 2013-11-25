@@ -14,8 +14,7 @@ public class RepositoryWatcher {
 
         //define a folder root
         Path myDir = Paths.get("c:/scripts"); 
-        //Path myDir = Paths.get("\\\\svuent\\fs\\us\\Applications\\SAL\\Dev\\data\\StoreDocumentRepository");
-
+        
         try {
            WatchService watcher = myDir.getFileSystem().newWatchService();
            myDir.register(watcher, StandardWatchEventKinds.ENTRY_CREATE, 
